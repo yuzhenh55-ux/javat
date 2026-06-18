@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>智慧健康日誌與風險評估系統</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <h1>智慧健康日誌與風險評估系統</h1>
+
+    <div class="container">
+
+        <div class="card">
+
+            <h2>健康資料輸入</h2>
+
+            <label>日期</label>
+            <input type="date" id="date">
+
+            <label>睡眠時數</label>
+            <input type="number" id="sleep">
+
+            <label>步數</label>
+            <input type="number" id="steps">
+
+            <label>心情分數 (1~10)</label>
+            <input type="number" id="mood">
+
+            <button onclick="addRecord()">新增紀錄</button>
+
+            <button onclick="showTrend()">
+                趨勢分析
+            </button>
+
+            <h2 id="riskLabel">風險：</h2>
+
+        </div>
+
+        <div class="card">
+
+            <h2>健康紀錄</h2>
+
+            <table>
+
+                <thead>
+                    <tr>
+                        <th>日期</th>
+                        <th>睡眠</th>
+                        <th>步數</th>
+                        <th>心情</th>
+                        <th>風險</th>
+                    </tr>
+                </thead>
+
+                <tbody id="tableBody">
+                </tbody>
+
+            </table>
+
+        </div>
+
+    </div>
+
+    <div class="card trend">
+
+        <h2>健康趨勢分析</h2>
+
+        <div id="trendArea">
+            尚未分析
+        </div>
+
+    </div>
+
+    <script src="script.js"></script>
+
+</body>
+
+</html>
